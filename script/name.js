@@ -13,6 +13,8 @@ function firstVisit() {
     }
 }
 
-if (!name) firstVisit();
-
-title.innerHTML = `Feeling down, ${name}?`;
+if (!name) {
+    firstVisit();
+} else {
+    title.innerHTML = `Feeling down, ${name}?`;
+}
