@@ -35,3 +35,15 @@ body {
     -moz-animation: btn-gradient 30s ease infinite;
     animation: btn-gradient 30s ease infinite;
 }
+
+#madeWith {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#madeWith p {
+    width: 24.6rem;
+    margin: 0 auto;
+}
