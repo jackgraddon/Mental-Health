@@ -12,3 +12,6 @@ function firstVisit() {
 const name = Cookies.get('name');
 
 if (!name) firstVisit();
+
+let title = document.getElementById('title');
+title.innerHTML = `Feeling down, ${name}?`;
