@@ -15,6 +15,13 @@ body {
     background-size: 800% 800%;
     -webkit-animation: backgroundGradient 30s ease infinite;
     animation: backgroundGradient 30s ease infinite;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar-thumb {
+    color: rgba(255, 255, 255, 0.1);
+}
+body::-webkit-scrollbar-track {
+    color: rgba(255, 255, 255, 0.0);
 }
 
 .jumbotron {
@@ -44,9 +51,18 @@ body {
     color: #0077ff !important;
     cursor: pointer;
 }
+@media only screen and (min-width: 768px) {
+    #madeWith {
+        position: fixed;
+        bottom: 0;
+    }
+    #madeWith p {
+        width: auto !important;
+        margin: 0.5rem !important;
+    }
+}
 #madeWith {
-    position: fixed;
-    bottom: 0;
+    margin-top: 2rem;
     padding: 1rem;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.1);
