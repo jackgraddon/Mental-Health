@@ -13,7 +13,6 @@ function firstVisit() {
         })
         title.innerHTML = `Feeling down, ${name}?`;
         console.log(title.innerHTML);
-        window.location.reload();
     }
 }
 
@@ -22,5 +21,4 @@ if (!name) {
 } else {
     title.innerHTML = `Feeling down, ${name}?`;
     console.log(title.innerHTML);
-    window.location.reload();
 }
