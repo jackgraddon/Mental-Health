@@ -22,3 +22,4 @@ if (!name) {
     title.innerHTML = `Feeling down, ${name}?`;
     console.log(title.innerHTML);
 }
+window.location.reload();
