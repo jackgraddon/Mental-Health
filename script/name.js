@@ -1,4 +1,4 @@
-let title = document.getElementById('title');
+let title = document.querySelector('#title');
 const name = Cookies.get('name');
 
 function firstVisit() {
