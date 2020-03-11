@@ -47,3 +47,58 @@ body {
 .jumbotron {
     background-color: #e9ecefa9;
 }
+
+.card {
+    background-color: #e9ecefa9;
+}
+
+.btn-gradient {
+    background: linear-gradient(230deg, #76d8e3, #a476e3, #e376b4);
+    background-size: 600% 600%;
+
+    -webkit-animation: btn-gradient 30s ease infinite;
+    -moz-animation: btn-gradient 30s ease infinite;
+    animation: btn-gradient 30s ease infinite;
+}
+
+@-webkit-keyframes btn-gradient {
+    0% {
+        background-position: 0% 99%
+    }
+
+    50% {
+        background-position: 100% 2%
+    }
+
+    100% {
+        background-position: 0% 99%
+    }
+}
+
+@-moz-keyframes btn-gradient {
+    0% {
+        background-position: 0% 99%
+    }
+
+    50% {
+        background-position: 100% 2%
+    }
+
+    100% {
+        background-position: 0% 99%
+    }
+}
+
+@keyframes btn-gradient {
+    0% {
+        background-position: 0% 99%
+    }
+
+    50% {
+        background-position: 100% 2%
+    }
+
+    100% {
+        background-position: 0% 99%
+    }
+}
