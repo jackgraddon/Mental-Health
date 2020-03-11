@@ -11,7 +11,7 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: linear-gradient(270deg, #66d0d5, #b766d5, #e16bae, #6be1ae);
+    background: linear-gradient(270deg, #66d0d5, #b766d5, #e16bae);
     background-size: 800% 800%;
     -webkit-animation: backgroundGradient 30s ease infinite;
     animation: backgroundGradient 30s ease infinite;
