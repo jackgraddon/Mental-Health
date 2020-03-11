@@ -1,4 +1,5 @@
-@import "root.css";
+@import url("root.css");
+@import url('animations.css');
 
 /*body adjustments*/
 body {
@@ -14,34 +15,6 @@ body {
     background-size: 800% 800%;
     -webkit-animation: backgroundGradient 30s ease infinite;
     animation: backgroundGradient 30s ease infinite;
-}
-
-@-webkit-keyframes backgroundGradient {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
-
-@keyframes backgroundGradient {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
 }
 
 .jumbotron {
@@ -61,46 +34,4 @@ body {
     -webkit-animation: btn-gradient 30s ease infinite;
     -moz-animation: btn-gradient 30s ease infinite;
     animation: btn-gradient 30s ease infinite;
-}
-
-@-webkit-keyframes btn-gradient {
-    0% {
-        background-position: 0% 99%
-    }
-
-    50% {
-        background-position: 100% 2%
-    }
-
-    100% {
-        background-position: 0% 99%
-    }
-}
-
-@-moz-keyframes btn-gradient {
-    0% {
-        background-position: 0% 99%
-    }
-
-    50% {
-        background-position: 100% 2%
-    }
-
-    100% {
-        background-position: 0% 99%
-    }
-}
-
-@keyframes btn-gradient {
-    0% {
-        background-position: 0% 99%
-    }
-
-    50% {
-        background-position: 100% 2%
-    }
-
-    100% {
-        background-position: 0% 99%
-    }
 }
