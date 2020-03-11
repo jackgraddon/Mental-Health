@@ -1,0 +1,49 @@
+@import "root.css";
+
+/*body adjustments*/
+body {
+    cursor: default;
+    /*disables text selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: linear-gradient(270deg, #66d0d5, #b766d5, #e16bae, #6be1ae);
+    background-size: 800% 800%;
+    -webkit-animation: backgroundGradient 30s ease infinite;
+    animation: backgroundGradient 30s ease infinite;
+}
+
+@-webkit-keyframes backgroundGradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes backgroundGradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.jumbotron {
+    background-color: #e9ecefa9;
+}
