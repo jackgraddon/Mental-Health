@@ -27,11 +27,9 @@ body::-webkit-scrollbar-track {
 .jumbotron {
     background-color: #e9ecefa9;
 }
-
 .card {
     background-color: #e9ecefa9;
 }
-
 .btn-gradient {
     color: white !important;
 
@@ -41,6 +39,16 @@ body::-webkit-scrollbar-track {
     -webkit-animation: btn-gradient 30s ease infinite;
     -moz-animation: btn-gradient 30s ease infinite;
     animation: btn-gradient 30s ease infinite;
+}
+.btn {
+    filter: opacity(0.8);
+    transition: 200ms ease;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+.btn:active {
+    transform: scale(0.95);
 }
 .text-click {
     color: #0097dd !important;

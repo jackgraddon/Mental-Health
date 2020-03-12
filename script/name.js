@@ -13,6 +13,7 @@ function firstVisit() {
         Cookies.set('name', person, {
             expires: 7
         })
+        alert(`What a cool name, ${person}!`)
         title.innerHTML = `Feeling down, ${name}?`;
         subtitle.innerHTML = `Let's fix that!`;
         console.log(title.innerHTML);
