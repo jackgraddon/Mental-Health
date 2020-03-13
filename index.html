@@ -32,13 +32,17 @@
                     <span class="invis" id="nameForm">
                         <label for="name">What's your name?</label><br>
                         <input type="text" id="name" name="name"><br>
-                        <p style="font-size: x-small" class="text-black-50">Do Not hit Enter! It will reset the page!</p>
+                        <p style="font-size: x-small" class="text-black-50">Do Not hit Enter! It will reset the page!
+                        </p>
                     </span>
                     <span class="invis" id="notToday">
                         <p>We hope to know you soon!</p>
                     </span>
                 </div>
                 <div class="modal-footer">
+                    <div class="spinner-border text-primary invis" id="nameSpinner" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
                     <button id="noBtn" type="button" class="btn btn-secondary" onclick="javascript:denied()">Not
                         Today</button>
                     <button id="closeBtn" type="button" class="btn btn-secondary invis"
