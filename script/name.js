@@ -58,10 +58,10 @@ function confirmed() {
 function setName() {
     let name = document.querySelector('#name').value;
     $('#nameSpinner').removeClass('invis');
+    Cookies.set('name', name, {expires: 365});
     setTimeout(() => {
-        Cookies.set('name', name, {expires: 365});
-        dismissModal()
         returningVisit()
+        dismissModal()
     }, 2000);
 }
 
