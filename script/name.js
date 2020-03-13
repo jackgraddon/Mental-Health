@@ -58,10 +58,10 @@ function confirmed() {
 }
 
 function setName() {
-    let name = document.querySelector('#name').value;
+    let person = document.querySelector('#name').value.toString();
     $('#nameSpinner').removeClass('invis');
-    Cookies.set('name', name, {
-        expires: 31
+    Cookies.set('name', person, {
+        expires: 7
     });
     setTimeout(() => {
         returningVisit()
@@ -69,6 +69,11 @@ function setName() {
         window.location.reload()
     }, 2000);
 }
+$(document).keyup(function (e) {
+    if ((e.key === "Enter") && (wantingName == true)) {
+        setName();
+    }
+});
 
 
 if (!name) {
