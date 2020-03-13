@@ -59,7 +59,7 @@ function setName() {
     let name = document.querySelector('#name').value;
     $('#nameSpinner').removeClass('invis');
     setTimeout(() => {
-        Cookies.set('name', name);
+        Cookies.set('name', name, {expires: 365});
         dismissModal()
         returningVisit()
     }, 2000);
