@@ -108,7 +108,7 @@ body::-webkit-scrollbar-track {
 }
 
 /* Input Boxes */
-#fname {
+#name {
     color: white;
     border: none;
     border-radius: 5px;
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-track {
     -moz-animation: btn-gradient 30s ease infinite;
     animation: btn-gradient 30s ease infinite;
 }
-#fname:focus {
+#name:focus {
     outline: none;
 }
 
