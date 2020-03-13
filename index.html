@@ -17,6 +17,76 @@
 </head>
 
 <body>
+    <div class="modal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="nameModalLabel">Welcome!</h5>
+                    <button type="button" class="close" onclick="javascript:dismissModal()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="welcomeTextModal">Welcome! Let's get started.</p>
+                    <span class="invis" id="nameForm">
+                        <form>
+                            <label for="fname">What's your name?</label><br>
+                            <input type="text" id="fname" name="fname">
+                        </form>
+                    </span>
+                    <span class="invis" id="notToday">
+                        <p>We hope to know you soon!</p>
+                    </span>
+                </div>
+                <div class="modal-footer">
+                    <button id="noBtn" type="button" class="btn btn-secondary" onclick="javascript:denied()">Not Today</button>
+                    <button id="closeBtn" type="button" class="btn btn-secondary invis" onclick="javascript:dismissModal()">Close</button>
+                    <button id="yesBtn" type="button" class="btn btn-primary" onclick="javascript:confirmed()">Ok</button>
+                    <button id="nameBtn" type="button" class="btn btn-primary invis" onclick="javascript:setName()">That's Me!</button>
+                    <script type="text/javascript">
+                        $(document).keyup(function (e) {
+                            if (e.key === "Escape") { // escape key maps to keycode `27`
+                                $(`#nameModal`).removeClass('show');
+                                $(`#nameModal`).removeClass('block');
+                                $('body').removeClass('modal-open');
+                                $('#modalBackground').removeClass('show');
+                            }
+                        });
+
+                        function denied() {
+                            $('#notToday').removeClass('invis');
+                            $('#welcomeTextModal').addClass('invis');
+                            $('#yesBtn').addClass('invis');
+                            $('#noBtn').addClass('invis');
+                            $('#closeBtn').removeClass('invis');
+                        }
+                        function dismissModal() {
+                            $(`#nameModal`).removeClass('show');
+                            $(`#nameModal`).removeClass('block');
+                            $('body').removeClass('modal-open');
+                            $('#modalBackground').removeClass('show');
+                        }
+                        function confirmed() {
+                            $('#nameForm').removeClass('invis');
+                            $('#welcomeTextModal').addClass('invis');
+                            $('#noBtn').addClass('invis');
+                            $('#yesBtn').addClass('invis');
+                            $('#nameBtn').removeClass('invis');
+                        }
+                        function setName() {
+                            let name = document.querySelector('#fname').value;
+                            Cookies.set('name', name);
+                            $(`#nameModal`).removeClass('show');
+                            $(`#nameModal`).removeClass('block');
+                            $('body').removeClass('modal-open');
+                            $('#modalBackground').removeClass('show');
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
     <main class="container">
         <div class="jumbotron mt-5">
             <h1 id="title">Welcome!</h1>
@@ -48,7 +118,8 @@
     </main>
     <div class="text-white-50" id="madeWith">
         <p>Made with &hearts; from Jackson Graddon and Genevieve Nygren</p>
-        <p style="font-size: x-small;" id="disclaimer">Your name is not shared with anyone!</p>
+        <p style="font-size: x-small;" id="disclaimer">Your name is not shared with anyone! In fact, only your computer
+            knows what it is!</p>
     </div>
     <!-- Name -->
     <script src="script/name.js"></script>
@@ -66,3 +137,5 @@
         Jackson Graddon 
         Genevieve Nygren
 -->
+
+<div class="modal-backdrop fade" id="modalBackground"></div>

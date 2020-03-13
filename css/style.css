@@ -1,7 +1,9 @@
 @import url("root.css");
 @import url('animations.css');
 
-/*body adjustments*/
+
+
+/* Body Adjustments*/
 body {
     cursor: default;
     /*disables text selection*/
@@ -17,19 +19,25 @@ body {
     animation: backgroundGradient 30s ease infinite;
     overflow-x: hidden;
 }
+
 body::-webkit-scrollbar-thumb {
     color: rgba(255, 255, 255, 0.1);
 }
+
 body::-webkit-scrollbar-track {
     color: rgba(255, 255, 255, 0.0);
 }
 
+/* Bootstram Adjustments */
 .jumbotron {
     background-color: #e9ecefa9;
 }
+
 .card {
     background-color: #e9ecefa9;
 }
+
+/* Buttons */
 .btn-gradient {
     color: white !important;
 
@@ -40,31 +48,41 @@ body::-webkit-scrollbar-track {
     -moz-animation: btn-gradient 30s ease infinite;
     animation: btn-gradient 30s ease infinite;
 }
+
 .btn {
     filter: opacity(0.8);
     transition: 200ms ease;
 }
+
 .btn:hover {
+    filter: opacity(1);
     transform: scale(1.05);
 }
+
 .btn:active {
     transform: scale(0.95);
 }
+
+/* Clickable Text */
 .text-click {
     color: #0097dd !important;
     text-decoration: none;
     transition: 300ms ease;
 }
+
 .text-click:hover {
     color: #0077ff !important;
     cursor: pointer;
 }
+
+/* Made With Footer */
 @media only screen and (min-width: 768px) {
     #madeWith {
         position: fixed;
         bottom: 0;
     }
 }
+
 @media only screen and (max-width: 768px) {
     #madeWith p {
         font-size: small;
@@ -72,16 +90,47 @@ body::-webkit-scrollbar-track {
         margin: 0.5rem !important;
     }
 }
+
 #madeWith {
     margin-top: 2rem;
     padding: 1rem;
     width: 100vw;
     background-color: rgba(255, 255, 255, 0.1);
 }
+
 #madeWith p {
     width: 26.2rem;
     margin: 0 auto;
 }
+
 #madeWith #disclaimer {
-    width: 12.5rem !important;
+    width: 22.7rem !important;
+}
+
+/* Input Boxes */
+#fname {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: linear-gradient(230deg, #548f97, #8a71ac, #a7688c);
+    background-size: 600% 600%;
+
+    -webkit-animation: btn-gradient 30s ease infinite;
+    -moz-animation: btn-gradient 30s ease infinite;
+    animation: btn-gradient 30s ease infinite;
+}
+#fname:focus {
+    outline: none;
+}
+
+/* Layout Clases */
+.block {
+    display: block;
+}
+
+.invis {
+    display: none;
+    width: 0;
+    height: 0;
 }
