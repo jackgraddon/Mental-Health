@@ -64,7 +64,6 @@ function setName() {
         expires: 7
     });
     setTimeout(() => {
-        returningVisit()
         dismissModal()
         window.location.reload()
     }, 2000);
