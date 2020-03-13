@@ -11,6 +11,7 @@ function firstVisit() {
         $('#modalBackground').addClass('show');
         $('#nameModal').addClass('show');
         $('#nameModal').addClass('block');
+        $('#modalBackground').removeClass('invis');
     }, 100);
 
 }
@@ -44,6 +45,7 @@ function dismissModal() {
     $(`#nameModal`).removeClass('block');
     $('body').removeClass('modal-open');
     $('#modalBackground').removeClass('show');
+    $('#modalBackground').addClass('invis');
 }
 
 function confirmed() {
@@ -58,7 +60,9 @@ function confirmed() {
 function setName() {
     let name = document.querySelector('#name').value;
     $('#nameSpinner').removeClass('invis');
-    Cookies.set('name', name, {expires: 365});
+    Cookies.set('name', name, {
+        expires: 31
+    });
     setTimeout(() => {
         returningVisit()
         dismissModal()
