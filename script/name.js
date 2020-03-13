@@ -3,20 +3,61 @@ let subtitle = document.querySelector('#subtitle');
 let nameAlert = document.querySelector('#nameModal');
 const name = Cookies.get('name');
 
+// Welcome Modal Javascript
+$(document).keyup(function (e) {
+    if (e.key === "Escape") { // escape key maps to keycode `27`
+        $(`#nameModal`).removeClass('show');
+        $(`#nameModal`).removeClass('block');
+        $('body').removeClass('modal-open');
+        $('#modalBackground').removeClass('show');
+    }
+});
+
+function denied() {
+    $('#notToday').removeClass('invis');
+    $('#welcomeTextModal').addClass('invis');
+    $('#yesBtn').addClass('invis');
+    $('#noBtn').addClass('invis');
+    $('#closeBtn').removeClass('invis');
+}
+function dismissModal() {
+    $(`#nameModal`).removeClass('show');
+    $(`#nameModal`).removeClass('block');
+    $('body').removeClass('modal-open');
+    $('#modalBackground').removeClass('show');
+}
+function confirmed() {
+    $('#nameForm').removeClass('invis');
+    $('#welcomeTextModal').addClass('invis');
+    $('#noBtn').addClass('invis');
+    $('#yesBtn').addClass('invis');
+    $('#nameBtn').removeClass('invis');
+}
+function setName() {
+    let name = document.querySelector('#fname').value;
+    Cookies.set('name', name);
+    window.location.reload();
+}
+
+// Site Load Script
 function firstVisit() {
     setTimeout(() => {
         $('body').addClass('modal-open');
         $('#modalBackground').addClass('show');
         $('#nameModal').addClass('show');
         $('#nameModal').addClass('block');
-    }, 1000);
+    }, 100);
 
+}
+
+function returningVisit() {
+    title.innerHTML = `Feeling down, ${name}?`;
+    subtitle.innerHTML = `Let's fix that!`;
+    console.log(title.innerHTML);
 }
 
 if (!name) {
     firstVisit();
 } else {
-    title.innerHTML = `Feeling down, ${name}?`;
-    subtitle.innerHTML = `Let's fix that!`;
-    console.log(title.innerHTML);
+    returningVisit();
 }

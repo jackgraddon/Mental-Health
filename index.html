@@ -44,45 +44,6 @@
                     <button id="closeBtn" type="button" class="btn btn-secondary invis" onclick="javascript:dismissModal()">Close</button>
                     <button id="yesBtn" type="button" class="btn btn-primary" onclick="javascript:confirmed()">Ok</button>
                     <button id="nameBtn" type="button" class="btn btn-primary invis" onclick="javascript:setName()">That's Me!</button>
-                    <script type="text/javascript">
-                        $(document).keyup(function (e) {
-                            if (e.key === "Escape") { // escape key maps to keycode `27`
-                                $(`#nameModal`).removeClass('show');
-                                $(`#nameModal`).removeClass('block');
-                                $('body').removeClass('modal-open');
-                                $('#modalBackground').removeClass('show');
-                            }
-                        });
-
-                        function denied() {
-                            $('#notToday').removeClass('invis');
-                            $('#welcomeTextModal').addClass('invis');
-                            $('#yesBtn').addClass('invis');
-                            $('#noBtn').addClass('invis');
-                            $('#closeBtn').removeClass('invis');
-                        }
-                        function dismissModal() {
-                            $(`#nameModal`).removeClass('show');
-                            $(`#nameModal`).removeClass('block');
-                            $('body').removeClass('modal-open');
-                            $('#modalBackground').removeClass('show');
-                        }
-                        function confirmed() {
-                            $('#nameForm').removeClass('invis');
-                            $('#welcomeTextModal').addClass('invis');
-                            $('#noBtn').addClass('invis');
-                            $('#yesBtn').addClass('invis');
-                            $('#nameBtn').removeClass('invis');
-                        }
-                        function setName() {
-                            let name = document.querySelector('#fname').value;
-                            Cookies.set('name', name);
-                            $(`#nameModal`).removeClass('show');
-                            $(`#nameModal`).removeClass('block');
-                            $('body').removeClass('modal-open');
-                            $('#modalBackground').removeClass('show');
-                        }
-                    </script>
                 </div>
             </div>
         </div>
