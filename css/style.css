@@ -76,7 +76,7 @@ body::-webkit-scrollbar-track {
 }
 
 /* Made With Footer */
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     #madeWith {
         position: fixed;
         bottom: 0;
@@ -89,7 +89,7 @@ body::-webkit-scrollbar-track {
         width: auto !important;
         margin: 0.5rem !important;
     }
-}
+} */
 
 #madeWith {
     margin-top: 2rem;
