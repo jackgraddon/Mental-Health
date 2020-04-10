@@ -29,6 +29,7 @@ $(document).keyup(function (e) {
         $(`#nameModal`).removeClass('block');
         $('body').removeClass('modal-open');
         $('#modalBackground').removeClass('show');
+        $('#modalBackground').addClass('invis')
     }
 });
 

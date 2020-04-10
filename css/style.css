@@ -101,15 +101,6 @@ body::-webkit-scrollbar-track {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-#madeWith p {
-    width: 100%;
-    margin: 0 auto;
-}
-
-#madeWith #disclaimer {
-    width: 100% !important;
-}
-
 /* Input Boxes */
 #name {
     color: white;
