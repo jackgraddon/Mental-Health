@@ -1,7 +1,12 @@
 @import url("root.css");
 @import url('animations.css');
 
+@media only screen and (max-width: 576px) {
 
+}
+@media only screen and (min-width: 576px) {
+
+}
 
 /* Body Adjustments*/
 body {
@@ -13,11 +18,10 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: linear-gradient(270deg, #66d0d5, #b766d5, #e16bae);
+    background-image: linear-gradient(270deg, #66d0d5, #b766d5, #e16bae);
     background-size: 800% 800%;
     -webkit-animation: backgroundGradient 30s ease infinite;
     animation: backgroundGradient 30s ease infinite;
-    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -94,17 +98,16 @@ body::-webkit-scrollbar-track {
 #madeWith {
     margin-top: 2rem;
     padding: 1rem;
-    width: 100vw;
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 #madeWith p {
-    width: 26.2rem;
+    width: 100%;
     margin: 0 auto;
 }
 
 #madeWith #disclaimer {
-    width: 22.7rem !important;
+    width: 100% !important;
 }
 
 /* Input Boxes */
