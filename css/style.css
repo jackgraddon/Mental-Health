@@ -80,21 +80,6 @@ body::-webkit-scrollbar-track {
 }
 
 /* Made With Footer */
-/* @media only screen and (min-width: 768px) {
-    #madeWith {
-        position: fixed;
-        bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    #madeWith p {
-        font-size: small;
-        width: auto !important;
-        margin: 0.5rem !important;
-    }
-} */
-
 #madeWith {
     margin-top: 2rem;
     padding: 1rem;
